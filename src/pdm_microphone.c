@@ -18,8 +18,8 @@
 
 #include "pico/pdm_microphone.h"
 
-#define PDM_DECIMATION       64
-#define PDM_RAW_BUFFER_COUNT 2
+#define PDM_DECIMATION       128
+#define PDM_RAW_BUFFER_COUNT 4
 
 static struct {
     struct pdm_microphone_config config;
@@ -51,7 +51,7 @@ int pdm_microphone_init(const struct pdm_microphone_config* config) {
         if (pdm_mic.raw_buffer[i] == NULL) {
             pdm_microphone_deinit();
 
-            return -1;   
+            return -1;
         }
     }
 

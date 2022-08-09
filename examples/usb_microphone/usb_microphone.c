@@ -60,7 +60,7 @@ void usb_microphone_set_tx_ready_handler(usb_microphone_tx_ready_handler_t handl
 
 uint16_t usb_microphone_write(const void * data, uint16_t len)
 {
-  return tud_audio_write ((uint8_t *)data, len);
+  return tud_audio_write((uint8_t *)data, len);
 }
 
 void usb_microphone_task()
